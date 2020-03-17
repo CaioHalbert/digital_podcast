@@ -16,7 +16,7 @@ class _loginPageState extends State<loginPage> {
           left: 40,
           right: 40,
         ),
-        color: Colors.blueGrey,
+        color: Colors.grey,
         child:ListView(
 //-------------------------------------------------------------------------------
           children: <Widget>[
@@ -64,7 +64,53 @@ class _loginPageState extends State<loginPage> {
                   ),
               ),
 //-------------------------------------------------------------------------------
-              
+
+              SizedBox(height: 40),
+//-------------------------------------------------------------------------------    
+
+              Container(
+                height: 60,
+                alignment: Alignment.centerLeft,
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                    stops: [0.3, 0.8, 1],
+                    colors: [
+                      Color(0xFF242E66),
+                      Color(0xFF313F8C),
+                      Color(0xFF3A4AA6),
+                    ]
+                  ),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(5),
+                  )
+                ),
+                child: SizedBox.expand(
+                  child:FlatButton(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Text("Entrar",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.grey,
+                            fontSize: 20,
+
+                          ),
+                        ),
+                          Icon(
+                            Icons.account_circle,
+                            color: Colors.black,
+                            size: 24.0,
+                          ),
+                      ],
+                    ),
+                    onPressed: () {}, 
+                    ),
+                ),
+              ),
+//------------------------------------------------------------------------------- 
 
           ],
         ),
